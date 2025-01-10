@@ -6,30 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		73A93C402D3153CC004ADEC1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C2E2D3153CC004ADEC1 /* Poppins-Bold.ttf */; };
+		73A93C412D3153CC004ADEC1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C2F2D3153CC004ADEC1 /* Poppins-Medium.ttf */; };
+		73A93C422D3153CC004ADEC1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C302D3153CC004ADEC1 /* Poppins-Regular.ttf */; };
+		73A93C432D3153CC004ADEC1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C312D3153CC004ADEC1 /* Poppins-SemiBold.ttf */; };
+		73A93C442D3153CC004ADEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C332D3153CC004ADEC1 /* Assets.xcassets */; };
+		73A93C452D3153CC004ADEC1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C342D3153CC004ADEC1 /* Colors.xcassets */; };
+		73A93C462D3153CC004ADEC1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C352D3153CC004ADEC1 /* Info.plist */; };
+		73A93C472D3153CC004ADEC1 /* Offline_Files_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C2B2D3153CC004ADEC1 /* Offline_Files_AppApp.swift */; };
+		73A93C492D3153CC004ADEC1 /* FontHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C382D3153CC004ADEC1 /* FontHandler.swift */; };
+		73A93C4A2D3153CC004ADEC1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C392D3153CC004ADEC1 /* Persistence.swift */; };
+		73A93C4B2D3153CC004ADEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C3C2D3153CC004ADEC1 /* ContentView.swift */; };
+		73A93C4C2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C362D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		739D97E62D2F6FDE009AA35B /* Offline-Files-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline-Files-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A93C2B2D3153CC004ADEC1 /* Offline_Files_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline_Files_AppApp.swift; sourceTree = "<group>"; };
+		73A93C2E2D3153CC004ADEC1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		73A93C2F2D3153CC004ADEC1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		73A93C302D3153CC004ADEC1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		73A93C312D3153CC004ADEC1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		73A93C332D3153CC004ADEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73A93C342D3153CC004ADEC1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		73A93C352D3153CC004ADEC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73A93C382D3153CC004ADEC1 /* FontHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHandler.swift; sourceTree = "<group>"; };
+		73A93C392D3153CC004ADEC1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		73A93C3C2D3153CC004ADEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73A93C3F2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Offline_Files_App.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		73A93BAE2D3144F5004ADEC1 /* Exceptions for "Offline-Files-App" folder in "Offline-Files-App" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Info.plist,
-			);
-			target = 739D97E52D2F6FDE009AA35B /* Offline-Files-App */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		739D97E82D2F6FDE009AA35B /* Offline-Files-App */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				73A93BAE2D3144F5004ADEC1 /* Exceptions for "Offline-Files-App" folder in "Offline-Files-App" target */,
-			);
-			path = "Offline-Files-App";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		739D97E32D2F6FDE009AA35B /* Frameworks */ = {
@@ -45,7 +51,7 @@
 		739D97DD2D2F6FDE009AA35B = {
 			isa = PBXGroup;
 			children = (
-				739D97E82D2F6FDE009AA35B /* Offline-Files-App */,
+				73A93C3E2D3153CC004ADEC1 /* Offline-Files-App */,
 				739D97E72D2F6FDE009AA35B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +62,81 @@
 				739D97E62D2F6FDE009AA35B /* Offline-Files-App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		73A93C2C2D3153CC004ADEC1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C2B2D3153CC004ADEC1 /* Offline_Files_AppApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		73A93C2D2D3153CC004ADEC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73A93C322D3153CC004ADEC1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C2E2D3153CC004ADEC1 /* Poppins-Bold.ttf */,
+				73A93C2F2D3153CC004ADEC1 /* Poppins-Medium.ttf */,
+				73A93C302D3153CC004ADEC1 /* Poppins-Regular.ttf */,
+				73A93C312D3153CC004ADEC1 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		73A93C372D3153CC004ADEC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C322D3153CC004ADEC1 /* Fonts */,
+				73A93C332D3153CC004ADEC1 /* Assets.xcassets */,
+				73A93C342D3153CC004ADEC1 /* Colors.xcassets */,
+				73A93C352D3153CC004ADEC1 /* Info.plist */,
+				73A93C362D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		73A93C3A2D3153CC004ADEC1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C382D3153CC004ADEC1 /* FontHandler.swift */,
+				73A93C392D3153CC004ADEC1 /* Persistence.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		73A93C3B2D3153CC004ADEC1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		73A93C3D2D3153CC004ADEC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C3C2D3153CC004ADEC1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73A93C3E2D3153CC004ADEC1 /* Offline-Files-App */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C2C2D3153CC004ADEC1 /* Main */,
+				73A93C3D2D3153CC004ADEC1 /* Views */,
+				73A93C2D2D3153CC004ADEC1 /* Model */,
+				73A93C3B2D3153CC004ADEC1 /* ViewModel */,
+				73A93C372D3153CC004ADEC1 /* Resources */,
+				73A93C3A2D3153CC004ADEC1 /* Utils */,
+			);
+			path = "Offline-Files-App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +153,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				739D97E82D2F6FDE009AA35B /* Offline-Files-App */,
 			);
 			name = "Offline-Files-App";
 			packageProductDependencies = (
@@ -122,6 +200,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A93C402D3153CC004ADEC1 /* Poppins-Bold.ttf in Resources */,
+				73A93C412D3153CC004ADEC1 /* Poppins-Medium.ttf in Resources */,
+				73A93C422D3153CC004ADEC1 /* Poppins-Regular.ttf in Resources */,
+				73A93C432D3153CC004ADEC1 /* Poppins-SemiBold.ttf in Resources */,
+				73A93C442D3153CC004ADEC1 /* Assets.xcassets in Resources */,
+				73A93C452D3153CC004ADEC1 /* Colors.xcassets in Resources */,
+				73A93C462D3153CC004ADEC1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A93C472D3153CC004ADEC1 /* Offline_Files_AppApp.swift in Sources */,
+				73A93C492D3153CC004ADEC1 /* FontHandler.swift in Sources */,
+				73A93C4C2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld in Sources */,
+				73A93C4A2D3153CC004ADEC1 /* Persistence.swift in Sources */,
+				73A93C4B2D3153CC004ADEC1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +429,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		73A93C362D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				73A93C3F2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodel */,
+			);
+			currentVersion = 73A93C3F2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodel */;
+			path = Offline_Files_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 739D97DE2D2F6FDE009AA35B /* Project object */;
 }

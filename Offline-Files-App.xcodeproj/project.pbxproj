@@ -11,14 +11,18 @@
 		73A93C412D3153CC004ADEC1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C2F2D3153CC004ADEC1 /* Poppins-Medium.ttf */; };
 		73A93C422D3153CC004ADEC1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C302D3153CC004ADEC1 /* Poppins-Regular.ttf */; };
 		73A93C432D3153CC004ADEC1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C312D3153CC004ADEC1 /* Poppins-SemiBold.ttf */; };
-		73A93C442D3153CC004ADEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C332D3153CC004ADEC1 /* Assets.xcassets */; };
+		73A93C442D3153CC004ADEC1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C332D3153CC004ADEC1 /* Images.xcassets */; };
 		73A93C452D3153CC004ADEC1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C342D3153CC004ADEC1 /* Colors.xcassets */; };
-		73A93C462D3153CC004ADEC1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A93C352D3153CC004ADEC1 /* Info.plist */; };
 		73A93C472D3153CC004ADEC1 /* Offline_Files_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C2B2D3153CC004ADEC1 /* Offline_Files_AppApp.swift */; };
 		73A93C492D3153CC004ADEC1 /* FontHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C382D3153CC004ADEC1 /* FontHandler.swift */; };
 		73A93C4A2D3153CC004ADEC1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C392D3153CC004ADEC1 /* Persistence.swift */; };
-		73A93C4B2D3153CC004ADEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C3C2D3153CC004ADEC1 /* ContentView.swift */; };
+		73A93C4B2D3153CC004ADEC1 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C3C2D3153CC004ADEC1 /* OnboardView.swift */; };
 		73A93C4C2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C362D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld */; };
+		73A93C4E2D31681D004ADEC1 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C4D2D31681A004ADEC1 /* AppStrings.swift */; };
+		73A93C502D316D1A004ADEC1 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C4F2D316D1A004ADEC1 /* ViewCoordinator.swift */; };
+		73A93C522D316DA7004ADEC1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C512D316DA7004ADEC1 /* SplashScreen.swift */; };
+		73A93C542D317114004ADEC1 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C532D31710B004ADEC1 /* AppStorage.swift */; };
+		73A93C582D3171BD004ADEC1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C572D3171BD004ADEC1 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +32,18 @@
 		73A93C2F2D3153CC004ADEC1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		73A93C302D3153CC004ADEC1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		73A93C312D3153CC004ADEC1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		73A93C332D3153CC004ADEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73A93C332D3153CC004ADEC1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73A93C342D3153CC004ADEC1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		73A93C352D3153CC004ADEC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73A93C382D3153CC004ADEC1 /* FontHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHandler.swift; sourceTree = "<group>"; };
 		73A93C392D3153CC004ADEC1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		73A93C3C2D3153CC004ADEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73A93C3C2D3153CC004ADEC1 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		73A93C3F2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Offline_Files_App.xcdatamodel; sourceTree = "<group>"; };
+		73A93C4D2D31681A004ADEC1 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		73A93C4F2D316D1A004ADEC1 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
+		73A93C512D316DA7004ADEC1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		73A93C532D31710B004ADEC1 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
+		73A93C572D3171BD004ADEC1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				73A93C2B2D3153CC004ADEC1 /* Offline_Files_AppApp.swift */,
+				73A93C512D316DA7004ADEC1 /* SplashScreen.swift */,
+				73A93C4F2D316D1A004ADEC1 /* ViewCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -94,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				73A93C322D3153CC004ADEC1 /* Fonts */,
-				73A93C332D3153CC004ADEC1 /* Assets.xcassets */,
+				73A93C332D3153CC004ADEC1 /* Images.xcassets */,
 				73A93C342D3153CC004ADEC1 /* Colors.xcassets */,
 				73A93C352D3153CC004ADEC1 /* Info.plist */,
 				73A93C362D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld */,
@@ -105,6 +116,8 @@
 		73A93C3A2D3153CC004ADEC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				73A93C532D31710B004ADEC1 /* AppStorage.swift */,
+				73A93C4D2D31681A004ADEC1 /* AppStrings.swift */,
 				73A93C382D3153CC004ADEC1 /* FontHandler.swift */,
 				73A93C392D3153CC004ADEC1 /* Persistence.swift */,
 			);
@@ -121,7 +134,8 @@
 		73A93C3D2D3153CC004ADEC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73A93C3C2D3153CC004ADEC1 /* ContentView.swift */,
+				73A93C562D3171A8004ADEC1 /* Home */,
+				73A93C552D31719A004ADEC1 /* Onboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +151,22 @@
 				73A93C3A2D3153CC004ADEC1 /* Utils */,
 			);
 			path = "Offline-Files-App";
+			sourceTree = "<group>";
+		};
+		73A93C552D31719A004ADEC1 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C3C2D3153CC004ADEC1 /* OnboardView.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		73A93C562D3171A8004ADEC1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				73A93C572D3171BD004ADEC1 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +234,8 @@
 				73A93C412D3153CC004ADEC1 /* Poppins-Medium.ttf in Resources */,
 				73A93C422D3153CC004ADEC1 /* Poppins-Regular.ttf in Resources */,
 				73A93C432D3153CC004ADEC1 /* Poppins-SemiBold.ttf in Resources */,
-				73A93C442D3153CC004ADEC1 /* Assets.xcassets in Resources */,
+				73A93C442D3153CC004ADEC1 /* Images.xcassets in Resources */,
 				73A93C452D3153CC004ADEC1 /* Colors.xcassets in Resources */,
-				73A93C462D3153CC004ADEC1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,11 +246,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A93C522D316DA7004ADEC1 /* SplashScreen.swift in Sources */,
+				73A93C4E2D31681D004ADEC1 /* AppStrings.swift in Sources */,
 				73A93C472D3153CC004ADEC1 /* Offline_Files_AppApp.swift in Sources */,
+				73A93C582D3171BD004ADEC1 /* HomeView.swift in Sources */,
 				73A93C492D3153CC004ADEC1 /* FontHandler.swift in Sources */,
 				73A93C4C2D3153CC004ADEC1 /* Offline_Files_App.xcdatamodeld in Sources */,
 				73A93C4A2D3153CC004ADEC1 /* Persistence.swift in Sources */,
-				73A93C4B2D3153CC004ADEC1 /* ContentView.swift in Sources */,
+				73A93C542D317114004ADEC1 /* AppStorage.swift in Sources */,
+				73A93C4B2D3153CC004ADEC1 /* OnboardView.swift in Sources */,
+				73A93C502D316D1A004ADEC1 /* ViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +393,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${SRCROOT}/Offline-Files-App/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -389,6 +424,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${SRCROOT}/Offline-Files-App/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

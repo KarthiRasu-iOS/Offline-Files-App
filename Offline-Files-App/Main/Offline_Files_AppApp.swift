@@ -13,7 +13,7 @@ struct Offline_Files_AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViewCoordinator()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

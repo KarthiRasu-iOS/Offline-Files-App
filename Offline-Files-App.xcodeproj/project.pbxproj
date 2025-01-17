@@ -23,6 +23,11 @@
 		73A93C522D316DA7004ADEC1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C512D316DA7004ADEC1 /* SplashScreen.swift */; };
 		73A93C542D317114004ADEC1 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C532D31710B004ADEC1 /* AppStorage.swift */; };
 		73A93C582D3171BD004ADEC1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A93C572D3171BD004ADEC1 /* HomeView.swift */; };
+		73E89F8E2D3ABD6300B3B76A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E89F8D2D3ABD5E00B3B76A /* Extensions.swift */; };
+		73E89F912D3ABE4000B3B76A /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E89F902D3ABE4000B3B76A /* NavigationHeader.swift */; };
+		73E89F932D3AC99400B3B76A /* HomeEllipsisOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E89F922D3AC99400B3B76A /* HomeEllipsisOptionsView.swift */; };
+		73E89F952D3AC9A100B3B76A /* WelcomeNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E89F942D3AC9A100B3B76A /* WelcomeNoteView.swift */; };
+		73E89F982D3AC9C700B3B76A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E89F972D3AC9C300B3B76A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		73A93C512D316DA7004ADEC1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		73A93C532D31710B004ADEC1 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		73A93C572D3171BD004ADEC1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		73E89F8D2D3ABD5E00B3B76A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		73E89F902D3ABE4000B3B76A /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
+		73E89F922D3AC99400B3B76A /* HomeEllipsisOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEllipsisOptionsView.swift; sourceTree = "<group>"; };
+		73E89F942D3AC9A100B3B76A /* WelcomeNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNoteView.swift; sourceTree = "<group>"; };
+		73E89F972D3AC9C300B3B76A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 		73A93C3A2D3153CC004ADEC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				73E89F8D2D3ABD5E00B3B76A /* Extensions.swift */,
 				73A93C532D31710B004ADEC1 /* AppStorage.swift */,
 				73A93C4D2D31681A004ADEC1 /* AppStrings.swift */,
 				73A93C382D3153CC004ADEC1 /* FontHandler.swift */,
@@ -127,6 +138,7 @@
 		73A93C3B2D3153CC004ADEC1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				73E89F962D3AC9B700B3B76A /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,8 +146,9 @@
 		73A93C3D2D3153CC004ADEC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73A93C562D3171A8004ADEC1 /* Home */,
+				73E89F8F2D3ABE3000B3B76A /* NavigationHeader */,
 				73A93C552D31719A004ADEC1 /* Onboard */,
+				73A93C562D3171A8004ADEC1 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +178,24 @@
 			isa = PBXGroup;
 			children = (
 				73A93C572D3171BD004ADEC1 /* HomeView.swift */,
+				73E89F942D3AC9A100B3B76A /* WelcomeNoteView.swift */,
+				73E89F922D3AC99400B3B76A /* HomeEllipsisOptionsView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		73E89F8F2D3ABE3000B3B76A /* NavigationHeader */ = {
+			isa = PBXGroup;
+			children = (
+				73E89F902D3ABE4000B3B76A /* NavigationHeader.swift */,
+			);
+			path = NavigationHeader;
+			sourceTree = "<group>";
+		};
+		73E89F962D3AC9B700B3B76A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				73E89F972D3AC9C300B3B76A /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -248,6 +279,9 @@
 			files = (
 				73A93C522D316DA7004ADEC1 /* SplashScreen.swift in Sources */,
 				73A93C4E2D31681D004ADEC1 /* AppStrings.swift in Sources */,
+				73E89F932D3AC99400B3B76A /* HomeEllipsisOptionsView.swift in Sources */,
+				73E89F952D3AC9A100B3B76A /* WelcomeNoteView.swift in Sources */,
+				73E89F912D3ABE4000B3B76A /* NavigationHeader.swift in Sources */,
 				73A93C472D3153CC004ADEC1 /* Offline_Files_AppApp.swift in Sources */,
 				73A93C582D3171BD004ADEC1 /* HomeView.swift in Sources */,
 				73A93C492D3153CC004ADEC1 /* FontHandler.swift in Sources */,
@@ -255,6 +289,8 @@
 				73A93C4A2D3153CC004ADEC1 /* Persistence.swift in Sources */,
 				73A93C542D317114004ADEC1 /* AppStorage.swift in Sources */,
 				73A93C4B2D3153CC004ADEC1 /* OnboardView.swift in Sources */,
+				73E89F8E2D3ABD6300B3B76A /* Extensions.swift in Sources */,
+				73E89F982D3AC9C700B3B76A /* HomeViewModel.swift in Sources */,
 				73A93C502D316D1A004ADEC1 /* ViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +429,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${SRCROOT}/Offline-Files-App/Resources/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "My Files";
+				INFOPLIST_KEY_CFBundleDisplayName = LoFi;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,7 +460,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "${SRCROOT}/Offline-Files-App/Resources/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "My Files";
+				INFOPLIST_KEY_CFBundleDisplayName = LoFi;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

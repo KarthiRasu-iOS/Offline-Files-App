@@ -27,7 +27,7 @@ struct NavigationHeader : View {
             }
 
             Text(headerTitle)
-                .foregroundStyle(Color(.appTextSecondary))
+                .foregroundStyle(Color(.appTextPrimary))
                 .font(.poppins(.medium, size: 20))
         }
         .padding(.horizontal)

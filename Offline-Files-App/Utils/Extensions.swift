@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
+import SwiftUI
 
 extension String {
     
@@ -15,5 +16,17 @@ extension String {
             return ""
         }
         return bundleName
+    }
+}
+
+
+extension CGFloat {
+    static var width = UIScreen.main.bounds.width
+    static var height = UIScreen.main.bounds.height
+}
+
+extension View {
+    func keyboardHeight(_ state: Binding<CGFloat>) -> some View {
+        self.modifier(KeyboardProvider(keyboardHeight: state))
     }
 }

@@ -7,8 +7,17 @@
 
 import SwiftUI
 
+enum MenuActions {
+    case newFolder
+    case list
+    case grid
+    case sort
+}
+
 struct HomeEllipsisOptionsView : View {
-    var createNewFolder : (()->())?
+    
+    var performAction:((MenuActions)->())
+    
     var body: some View {
         HStack {
             Button {
@@ -28,7 +37,7 @@ struct HomeEllipsisOptionsView : View {
             
             Menu {
                 Button {
-                    createNewFolder?()
+                    performAction(.newFolder)
                 } label: {
                     HStack {
                         Text("New Folder")
@@ -39,7 +48,7 @@ struct HomeEllipsisOptionsView : View {
                 Divider()
                 
                 Button {
-                    
+                    performAction(.list)
                 } label: {
                     HStack {
                         Text("List")
@@ -48,7 +57,7 @@ struct HomeEllipsisOptionsView : View {
                 }
                 
                 Button {
-                    
+                    performAction(.grid)
                 } label: {
                     HStack {
                         Text("Icons")
@@ -59,7 +68,7 @@ struct HomeEllipsisOptionsView : View {
                 Divider()
                 
                 Button {
-                    
+                    performAction(.sort)
                 } label: {
                     HStack {
                         Text("Sort")

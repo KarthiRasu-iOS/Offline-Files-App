@@ -1,0 +1,39 @@
+//
+//  FoldersGridView.swift
+//  Offline-Files-App
+//
+//  Created by Karthi Rasu on 18/01/25.
+//
+
+import SwiftUI
+
+struct FoldersGridView : View {
+    @EnvironmentObject var orientationInfo : OrientationInfo
+    
+    @Binding var folders : [FoldersEntity]
+    
+    var numberOfItems : Int {
+        orientationInfo.orientation == .portrait ?
+        UIDevice.current.userInterfaceIdiom == .pad  ? 5 : 3
+        :
+        UIDevice.current.userInterfaceIdiom == .pad ? 6 : 5
+    }
+    
+    var items: [GridItem] {
+        Array(repeating: .init(.adaptive(minimum: 100)), count: numberOfItems)
+    }
+    
+    var body: some View {
+        LazyVGrid(columns: items,spacing: 20) {
+            ForEach(folders) { folder in
+                VStack {
+                    FolderShapeView(folderType: .grid)
+                        .frame(height: 70)
+                    Text(folder.name ?? "")
+                        .font(.poppins(.medium, size: 15))
+                }
+                .padding(.bottom,20)
+            }
+        }
+    }
+}

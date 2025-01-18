@@ -18,9 +18,9 @@ struct SplashScreen: View {
                 Image(.splashIcon)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200,height: 200)
+                    .frame(width: .width*0.4,height: .width*0.4)
                 
-                Text(AppStrings.appName)
+                Text(String.getAppName)
                     .font(.poppins(.bold, size: 30))
                     .foregroundStyle(Color.appTextPrimary)
                     .kerning(5)

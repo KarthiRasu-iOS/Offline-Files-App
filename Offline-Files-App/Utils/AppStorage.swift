@@ -7,4 +7,5 @@
 
 enum AppStorageKeys : String {
     case isOnboardCompleted
+    case userName
 }

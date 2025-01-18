@@ -11,33 +11,35 @@ struct HomeView: View {
     
     @StateObject var homeViewModel = HomeViewModel()
     
-    var gridItems = Array(repeating: GridItem(), count: 3)
-    
     var body: some View {
         ZStack {
             Color.appBgPrimary
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing:10) {
                 NavigationHeader(headerTitle: .getAppName)
+                    
                 HStack{
                     WelcomeNoteView()
                     Spacer()
-                    HomeEllipsisOptionsView {
-                        homeViewModel.createNewFolder()
-                    }
+                    HomeEllipsisOptionsView(performAction: homeViewModel.performAction)
                 }
                 
-                ScrollView {
-                    LazyVGrid(columns: gridItems) {
-                        ForEach(homeViewModel.folders) { folder in
-                            Image(.splashIcon)
-                                .resizable()
-                                .scaledToFit()
-                        }
+                ScrollView(showsIndicators: false){
+                    switch homeViewModel.folderDisplayType {
+                    case .list:
+                        FoldersListView(folders: $homeViewModel.folders)
+                    case .grid:
+                        FoldersGridView(folders: $homeViewModel.folders)
                     }
                 }
-                
+            
                 Spacer()
+            }
+            .fullScreenCover(isPresented: $homeViewModel.presentNewFolderNameView) {
+                NewFolderNameView(folderName: $homeViewModel.newFolderName) {
+                    print("new folder")
+                    homeViewModel.createNewFolder()
+                }
             }
         }
     }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct WelcomeNoteView : View {
+    @AppStorage(AppStorageKeys.userName.rawValue) var userName = ""
     var body: some View {
         VStack(alignment: .leading){
             Text("Hello,")
                 .font(.poppins(.regular, size: 25))
-            Text("Karthi Rasu")
+            Text(userName)
                 .font(.poppins(.semibold, size: 25))
         }
         .padding(.leading)

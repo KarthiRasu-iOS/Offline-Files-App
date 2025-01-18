@@ -15,6 +15,7 @@ struct Offline_Files_AppApp: App {
         WindowGroup {
             ViewCoordinator()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(OrientationInfo())
         }
     }
 }

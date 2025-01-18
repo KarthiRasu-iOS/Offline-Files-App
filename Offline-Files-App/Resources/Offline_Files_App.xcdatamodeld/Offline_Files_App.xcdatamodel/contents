@@ -4,5 +4,6 @@
         <attribute name="createdTimestamp" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="referenceid" optional="YES" attributeType="String"/>
+        <attribute name="tag" optional="YES" attributeType="String"/>
     </entity>
 </model>

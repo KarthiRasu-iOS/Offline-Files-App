@@ -10,8 +10,9 @@ import SwiftUI
 struct NewFolderNameView : View {
     @Environment(\.dismiss) var dismiss
     @Binding var folderName : String
-    
-    var createNewFolder : (()->())
+    @Binding var isFav : Bool
+    @Binding var folderColor : Color
+    var confirmFolderAction : (()->())
     
     var body: some View {
         VStack {
@@ -30,6 +31,23 @@ struct NewFolderNameView : View {
                             .stroke(Color.appTheme,lineWidth: 1)
                     }
                     .padding([.horizontal,.top])
+                    .autocorrectionDisabled()
+                
+                Toggle(isOn: $isFav) {
+                    Text("Favourite")
+                        .font(.poppins(.medium, size: 17))
+                }
+                .padding([.horizontal,.top])
+                
+                HStack {
+                    ColorPicker(selection: $folderColor,supportsOpacity: false) {
+                        Text("Folder Color")
+                            .font(.poppins(.medium, size: 17))
+                    }
+                    FolderShapeView(folderType: .list, color: .constant(""), preViewColor: $folderColor)
+                        .padding(.leading)
+                }
+                .padding()
                 
                 HStack{
                     Button {
@@ -46,7 +64,7 @@ struct NewFolderNameView : View {
                     
                     Button{
                         dismiss()
-                        createNewFolder()
+                        confirmFolderAction()
                     } label: {
                         Text("OK")
                             .frame(height: 50)
@@ -65,6 +83,19 @@ struct NewFolderNameView : View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding()
         }
-        .background(BackgroundClearView())
+        .onAppear(perform: {
+            UIView.setAnimationsEnabled(false)
+        })
+        .onDisappear(perform: {
+            UIView.setAnimationsEnabled(true)
+        })
     }
 }
+//
+//#Preview {
+//    @Previewable @State var name : String = ""
+//    @Previewable @State var isFav : Bool = false
+//    NewFolderNameView(folderName: $name, isFav: $isFav) {
+//        
+//    }
+//}

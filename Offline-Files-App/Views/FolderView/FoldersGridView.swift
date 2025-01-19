@@ -11,7 +11,9 @@ struct FoldersGridView : View {
     @EnvironmentObject var orientationInfo : OrientationInfo
     
     @Binding var folders : [FoldersEntity]
-    
+    @State var folderColor : Color = .appTheme
+    var editFolderName : ((FoldersEntity)->())
+        
     var numberOfItems : Int {
         orientationInfo.orientation == .portrait ?
         UIDevice.current.userInterfaceIdiom == .pad  ? 5 : 3
@@ -27,12 +29,23 @@ struct FoldersGridView : View {
         LazyVGrid(columns: items,spacing: 20) {
             ForEach(folders) { folder in
                 VStack {
-                    FolderShapeView(folderType: .grid)
+                    FolderShapeView(folderType: .grid,
+                                    color: .constant(folder.tag ?? ""),
+                                    preViewColor: $folderColor)
                         .frame(height: 70)
                     Text(folder.name ?? "")
                         .font(.poppins(.medium, size: 15))
                 }
+                .overlay(content: {
+                    if folder.isFavourite {
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(Color.red)
+                    }
+                })
                 .padding(.bottom,20)
+                .onLongPressGesture {
+                    editFolderName(folder)
+                }
             }
         }
     }

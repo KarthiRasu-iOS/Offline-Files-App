@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FoldersEntity" representedClassName="FoldersEntity" syncable="YES" codeGenerationType="class">
         <attribute name="createdTimestamp" optional="YES" attributeType="String"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="referenceid" optional="YES" attributeType="String"/>
         <attribute name="tag" optional="YES" attributeType="String"/>

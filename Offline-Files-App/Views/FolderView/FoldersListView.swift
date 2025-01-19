@@ -9,42 +9,37 @@ import SwiftUI
 
 struct FoldersListView : View {
     @Binding var folders : [FoldersEntity]
+    var editFolderName : ((FoldersEntity)->())
+    @State var folderColor : Color = .appTheme
     var body: some View {
         ForEach(folders) { folder in
             HStack{
-                FolderShapeView(folderType: .list)
+                FolderShapeView(folderType: .list,
+                                color: .constant(folder.tag ?? ""),
+                                preViewColor: $folderColor)
                     .frame(height: 70)
                 VStack(alignment: .leading){
                     Text(folder.name ?? "")
                         .font(.poppins(.medium, size: 15))
-                    Text(format(folder.createdTimestamp ?? ""))
+                    Text(String.formatDate(folder.createdTimestamp ?? ""))
                         .foregroundStyle(.gray)
                         .font(.poppins(.medium, size: 13))
                 }
                 Spacer()
+                if folder.isFavourite {
+                    Image(systemName: "heart.fill")
+                        .foregroundStyle(Color.red)
+                        .padding(.horizontal)
+                }
+                Image(systemName: "chevron.right")
+                    .font(.caption2)
+                    .foregroundStyle(Color(.appTextSecondary))
+            }
+            .onLongPressGesture {
+                editFolderName(folder)
             }
         }
         .padding(.horizontal)
-    }
-    
-    func format(_ timestamp : String) -> String{
-        if let timestamp = TimeInterval(timestamp) {
-            // Convert the timestamp to a Date object
-            let date = Date(timeIntervalSince1970: timestamp)
-
-            // Create a DateFormatter for the desired format
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-            dateFormatter.timeZone = TimeZone.current // Optional: Set your preferred timezone
-
-            // Convert the Date object to a formatted string
-            let formattedDate = dateFormatter.string(from: date)
-            print("Formatted Date: \(formattedDate)") // Output: 21/11/2023 (example)
-            return formattedDate
-        } else {
-            print("Invalid timestamp string")
-            return ""
-        }
     }
 }
 

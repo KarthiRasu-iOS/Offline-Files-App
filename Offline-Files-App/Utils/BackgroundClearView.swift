@@ -12,7 +12,7 @@ struct BackgroundClearView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         DispatchQueue.main.async {
-            view.superview?.superview?.backgroundColor = .clear
+            view.superview?.superview?.backgroundColor = UIColor.systemBackground.withAlphaComponent(0.5)
         }
         return view
     }

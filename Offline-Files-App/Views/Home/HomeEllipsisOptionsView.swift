@@ -11,12 +11,24 @@ enum MenuActions {
     case newFolder
     case list
     case grid
-    case sort
+    case sortbyname
+    case sortbycreationdate
 }
+
+enum FolderSortingOrder {
+    case ascending
+    case descending
+    case creationDateAsc
+    case creationDateDes
+}
+
 
 struct HomeEllipsisOptionsView : View {
     
     var performAction:((MenuActions)->())
+    
+    @State var viewSelectedOption : Int = 2
+    @State var sortSelectedOption : Int = 1
     
     var body: some View {
         HStack {
@@ -44,36 +56,40 @@ struct HomeEllipsisOptionsView : View {
                         Image(systemName: "folder.badge.plus")
                     }
                 }
-
-                Divider()
                 
-                Button {
-                    performAction(.list)
-                } label: {
+                Picker("", selection: $viewSelectedOption) {
+                    
                     HStack {
                         Text("List")
                         Image(systemName: "list.bullet")
                     }
-                }
-                
-                Button {
-                    performAction(.grid)
-                } label: {
+                    .tag(1)
+                    
                     HStack {
                         Text("Icons")
                         Image(systemName: "square.grid.2x2")
                     }
+                    .tag(2)
                 }
                 
-                Divider()
-                
-                Button {
-                    performAction(.sort)
-                } label: {
+                Picker("", selection: customBinding(for: $sortSelectedOption, menuAction: { newValue in
+                    switch newValue {
+                    case 1: performAction(.sortbyname)
+                    case 2: performAction(.sortbycreationdate)
+                    default: break
+                    }
+                })) {
                     HStack {
-                        Text("Sort")
+                        Text("Name")
                         Image("name_sort")
                     }
+                    .tag(1)
+                    
+                    HStack {
+                        Text("Created Date")
+                        Image(systemName: "calendar")
+                    }
+                    .tag(2)
                 }
                 
             } label: {
@@ -84,7 +100,26 @@ struct HomeEllipsisOptionsView : View {
                     .tint(.appTextSecondary)
                     .padding(.horizontal,5)
             }
+            .onChange(of: viewSelectedOption, { _, newValue in
+                switch newValue {
+                case 1:
+                    performAction(.list)
+                case 2:
+                    performAction(.grid)
+                default:
+                    break
+                }
+            })
         }
-        
+    }
+    
+    private func customBinding(for state: Binding<Int>, menuAction: @escaping (Int) -> Void) -> Binding<Int> {
+        Binding(
+            get: { state.wrappedValue },
+            set: { newValue in
+                state.wrappedValue = newValue
+                menuAction(newValue)
+            }
+        )
     }
 }

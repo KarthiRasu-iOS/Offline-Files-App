@@ -17,30 +17,42 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack(spacing:10) {
                 NavigationHeader(headerTitle: .getAppName)
-                    
+                
                 HStack{
                     WelcomeNoteView()
                     Spacer()
                     HomeEllipsisOptionsView(performAction: homeViewModel.performAction)
                 }
-                
-                ScrollView(showsIndicators: false){
-                    switch homeViewModel.folderDisplayType {
-                    case .list:
-                        FoldersListView(folders: $homeViewModel.folders)
-                    case .grid:
-                        FoldersGridView(folders: $homeViewModel.folders)
+                if homeViewModel.folders.isEmpty {
+                    VStack(spacing:15) {
+                        Image(systemName: "folder.fill")
+                            .font(.title)
+                        Text("No folders")
+                            .font(.poppins(.medium, size: 20))
                     }
+                    .foregroundStyle(Color.appTextSecondary)
+                    .frame(maxHeight: .infinity,alignment: .center)
+                }else{
+                    ScrollView(showsIndicators: false){
+                        switch homeViewModel.folderDisplayType {
+                        case .list:
+                            FoldersListView(folders: $homeViewModel.folders) { folder in
+                                homeViewModel.showFolderEditOptions(folder: folder)
+                            }
+                        case .grid:
+                            FoldersGridView(folders: $homeViewModel.folders) { folder in
+                                homeViewModel.showFolderEditOptions(folder: folder)
+                            }
+                        }
+                    }
+                    Spacer()
                 }
-            
-                Spacer()
             }
-            .fullScreenCover(isPresented: $homeViewModel.presentNewFolderNameView) {
-                NewFolderNameView(folderName: $homeViewModel.newFolderName) {
-                    print("new folder")
-                    homeViewModel.createNewFolder()
-                }
-            }
+            .presentNewFolderView(isPresented: $homeViewModel.presentNewFolderNameView,
+                                  folderName: $homeViewModel.newFolderName,
+                                  isFav: $homeViewModel.isFavouriteFolder,
+                                  folderColor: $homeViewModel.folderColor,
+                                  confirmFolderAction: homeViewModel.folderAction)
         }
     }
 }

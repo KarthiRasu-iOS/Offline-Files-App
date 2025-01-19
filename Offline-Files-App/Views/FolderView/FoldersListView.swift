@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FoldersListView : View {
     @Binding var folders : [FoldersEntity]
+    @Binding var navPath : NavigationPath
     var editFolderName : ((FoldersEntity)->())
     @State var folderColor : Color = .appTheme
     var body: some View {
@@ -34,6 +35,9 @@ struct FoldersListView : View {
                 Image(systemName: "chevron.right")
                     .font(.caption2)
                     .foregroundStyle(Color(.appTextSecondary))
+            }
+            .onTapGesture {
+                navPath.append(folder)
             }
             .onLongPressGesture {
                 editFolderName(folder)

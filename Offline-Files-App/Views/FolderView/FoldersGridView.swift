@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FoldersGridView : View {
     @EnvironmentObject var orientationInfo : OrientationInfo
-    
     @Binding var folders : [FoldersEntity]
+    @Binding var navPath : NavigationPath
     @State var folderColor : Color = .appTheme
     var editFolderName : ((FoldersEntity)->())
         
@@ -43,6 +43,9 @@ struct FoldersGridView : View {
                     }
                 })
                 .padding(.bottom,20)
+                .onTapGesture {
+                    navPath.append(folder)
+                }
                 .onLongPressGesture {
                     editFolderName(folder)
                 }

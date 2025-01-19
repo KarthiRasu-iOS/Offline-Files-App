@@ -38,6 +38,7 @@ extension FilesViewModel {
         filesEntity.data = fileData
         filesEntity.name = url.lastPathComponent
         filesEntity.fileType = url.pathExtension
+        filesEntity.fileURL = url.absoluteString
         folder.addToFiles(filesEntity)
         persistence.saveChanges()
         data = nil

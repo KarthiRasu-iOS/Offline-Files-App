@@ -32,20 +32,6 @@ struct HomeEllipsisOptionsView : View {
     
     var body: some View {
         HStack {
-            Button {
-                
-            } label: {
-                HStack{
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 40,height: 40)
-                            .foregroundStyle(.appBgSecondary)
-                            .clipShape(RoundedRectangle(cornerRadius: 25))
-                        Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.appTextSecondary)
-                    }
-                }
-            }
             
             Menu {
                 Button {

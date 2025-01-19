@@ -10,29 +10,30 @@ import SwiftUI
 struct ImageViewer: View {
     @State var data: Data?
     @State private var image: Image?
-    @State var previewImage : Bool = false
+    @State private var showImagePreview = false
     var body: some View {
         Group {
             if let image = image {
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 70, height: 70)
+                    .frame(width: 70, height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             } else {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.gray.opacity(0.3))
-                    .frame(width: 70, height: 70)
+                    .frame(width: 70, height: 100)
                     .onAppear {
                         loadImage()
                     }
             }
         }
-        .fullScreenCover(isPresented: $previewImage, content: {
+        
+        .sheet(isPresented: $showImagePreview) {
             ImagePreviewer(data: data ?? Data())
-        })
+        }
         .onTapGesture {
-            previewImage.toggle()
+            showImagePreview.toggle()
         }
     }
     
@@ -73,4 +74,5 @@ struct ImageViewer: View {
         }
         return UIImage(cgImage: downsampledImage)
     }
+
 }

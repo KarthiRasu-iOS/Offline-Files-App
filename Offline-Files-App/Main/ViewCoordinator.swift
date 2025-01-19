@@ -16,7 +16,7 @@ struct ViewCoordinator: View {
     var body: some View {
         if splashActive {
             if isOnboardCompleted {
-                HomeView()
+                FolderHomeView()
             }else{
                 OnboardView()
             }

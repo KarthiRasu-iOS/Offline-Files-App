@@ -8,37 +8,36 @@
 import SwiftUI
 
 struct ImagePreviewer : View {
-    @Environment(\.dismiss) var dismiss
     @State var data : Data
+    @State var image : Image?
     var body: some View {
         ZStack {
             Color.appBgPrimary.opacity(0.8)
                 .ignoresSafeArea()
             VStack {
-                if let image = getImageFromData(data: data) {
+                if let image = image {
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                } else {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.gray.opacity(0.3))
                 }
             }
-            
-            Button {
-                dismiss()
-            } label: {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.title)
-                    .foregroundStyle(Color.appTheme)
+            .onAppear {
+                getImageFromData(data: data)
             }
-            .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .topTrailing)
-            .padding()
         }
         .background(BackgroundClearView())
     }
     
-    func getImageFromData(data:Data)->Image?{
-        if let data = UIImage(data: data) {
-            return Image(uiImage: data)
+    func getImageFromData(data:Data){
+        DispatchQueue.global().async {
+            if let data = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.image = Image(uiImage: data)
+                }
+            }
         }
-        return nil
     }
 }

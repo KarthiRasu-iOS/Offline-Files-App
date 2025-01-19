@@ -4,6 +4,7 @@
         <attribute name="createdTimestamp" optional="YES" attributeType="String"/>
         <attribute name="data" optional="YES" attributeType="Binary"/>
         <attribute name="fileType" optional="YES" attributeType="String"/>
+        <attribute name="fileURL" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="referenceId" optional="YES" attributeType="String"/>
         <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoldersEntity" inverseName="files" inverseEntity="FoldersEntity"/>

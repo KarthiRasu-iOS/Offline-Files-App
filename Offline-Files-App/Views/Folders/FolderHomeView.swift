@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  FolderHomeView.swift
 //  Offline-Files-App
 //
 //  Created by Karthi Rasu on 10/01/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct FolderHomeView: View {
     
     @StateObject var homeViewModel = HomeViewModel()
     @State var navigationPath = NavigationPath()
@@ -58,7 +58,7 @@ struct HomeView: View {
                                       confirmFolderAction: homeViewModel.folderAction)
             }
             .navigationDestination(for: FoldersEntity.self) { folder in
-                FilesView(folder: folder)
+                FilesHomeView(folder: folder)
             }
         }
     }

@@ -21,6 +21,9 @@ struct FilesListView : View {
         Array(repeating: .init(.adaptive(minimum: 100)), count: numberOfItems)
     }
     
+    @State private var showFilePreview = false
+    @State private var fileURL: URL?
+    
     var body: some View {
         LazyVGrid(columns: items,spacing: 20) {
             ForEach(files) { file in
@@ -30,19 +33,49 @@ struct FilesListView : View {
                         case "jpg", "jpeg", "png" :
                             ImageViewer(data: file.data)
                         case "pdf","txt","docx","doc","xls","xlsx" :
-                            DocViewer(data:file.data)
+                            if let tempFileURL = saveBinaryFileToTemp(file: file) {
+                                FilePreview(fileURL: tempFileURL)
+                                    .frame(width: 70, height: 100)
+                                    .scaledToFill()
+                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                                    .onTapGesture {
+                                        fileURL = tempFileURL
+                                        showFilePreview.toggle()
+                                    }
+                            }
                         default :
                             EmptyView()
                         }
                     }
-                    
                     Text(file.name ?? "")
                         .font(.poppins(.medium, size: 15))
                         .lineLimit(1)
                         .multilineTextAlignment(.center)
                 }
+                .padding(.horizontal)
                 .padding(.bottom,20)
+                .sheet(isPresented: $showFilePreview) {
+                    if let fileURL = fileURL {
+                        FilePreview(fileURL: fileURL)
+                    }
+                }
             }
+        }
+    }
+    
+    func saveBinaryFileToTemp(file:FilesEntity) -> URL? {
+        let binaryData = file.data
+        
+        let tempDir = FileManager.default.temporaryDirectory
+        let fileName = file.name ?? ""
+        let fileURL = tempDir.appendingPathComponent(fileName).appendingPathExtension(file.fileType ?? "")
+        
+        do {
+            try binaryData?.write(to: fileURL)
+            return fileURL
+        } catch {
+            print("Error writing file: \(error)")
+            return nil
         }
     }
 }

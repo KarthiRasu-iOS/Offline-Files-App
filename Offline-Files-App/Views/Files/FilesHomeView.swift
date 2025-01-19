@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilesView : View {
+struct FilesHomeView : View {
     
     @Environment(\.dismiss) var popBack
         

@@ -22,7 +22,7 @@ struct FoldersGridView : View {
     }
     
     var items: [GridItem] {
-        Array(repeating: .init(.adaptive(minimum: 100)), count: numberOfItems)
+        Array(repeating: .init(.adaptive(minimum: UIDevice.current.userInterfaceIdiom == .pad ? 200 : 100)), count: numberOfItems)
     }
     
     var body: some View {

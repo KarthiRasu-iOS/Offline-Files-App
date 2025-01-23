@@ -10,6 +10,11 @@
 - [x] Provide options to mark folders as favorites and assign colors to each folder.
 - [x] Implement sorting options for folders by creation date and name.
 
-| Folders Grid | Folders List | FilesList  | Menu Options |
-|-----------|-----------|-----------|-----------|
-| ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_one.png) | ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_two.png) | ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_three.png) | ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_four.png) |
+
+| Folders Grid | Folders List
+|-----------|-----------|
+| ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_one.png) | ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_two.png) |
+
+| FilesList  | Menu Options |
+-----------|-----------|
+![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_three.png) | ![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Offline-Files-App/main/demo/preview_four.png) |
